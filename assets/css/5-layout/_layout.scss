@@ -1,0 +1,18 @@
+#background {
+    width: calc(100% + 390px);
+    height: calc(100% + 390px);
+    filter: blur(16px);
+    transform: scale(1.07);
+    position: fixed;
+    left: 0px;
+    top: -250px;
+    z-index: 0;
+}
+
+.stretch {
+    min-width:100%; min-height:100%; width:auto; height:auto;
+}
+body {
+  font-family: $font !important;
+  margin-top: 100px;
+}

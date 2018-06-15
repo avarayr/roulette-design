@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Ruletka</title>
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- build:css -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- endbuild -->
+  </head>
+
+  <body>
+      <div id="background">
+        <img src="assets/img/bg.png" class="stretch" alt="" />
+      </div>
+      <nav class="navbar navbar-expand-md navbar-dark bg-custom fixed-top">
+           <a class="navbar-brand" href=".">Рулетка</a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+           </button>
+
+           <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+             <ul class="navbar-nav mr-auto">
+               <li class="nav-item">
+                 <a class="nav-link" href="ruletka.html">Игра </a>
+               </li>
+               <li class="nav-item active">
+                 <a class="nav-link" href="history.html">История игр <span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link disabled" href="#">Игр Сегодня: 10</a>
+               </li>
+
+             </ul>
+           </div>
+        </nav>
+
+         <div class="container">
+
+          <div class="main-title history-title">
+            <span>ИСТОРИЯ ИГР</span>
+          </div>
+          <div class="game-history">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Игра</th>
+                  <th>Победитель</th>
+                  <th>Шанс победы</th>
+                  <th>Дата</th>
+                  <th>Выигрыш</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#16949</td>
+                  <td><span class="profile-trigger" data-id="1">Mika</span></td>
+                  <td>100%</td>
+                  <td>Сегодня 15:15</td>
+                  <td><div class="won-amount">$100.00</div></td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+         </div>
+
+         <div class="modal modal-profile" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" class="modal-username">Username</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-5s">
+                    <div class="user-profile-avatar">
+                      <img src="assets/img/user.png" alt="">
+                    </div>
+                    <div class="total-won">$500.5</div>
+                  </div>
+                  <div class="col-md">
+                    <table class="profile-win-stats table table-striped table-dark">
+                      <thead>
+                        <tr>
+                          <th>Игра</th>
+                          <th>Победил(а)?</th>
+                          <th>Шанс</th>
+                          <th>Сумма</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><div class="game-number">#1010</div></td>
+                          <td><div class="win-indicator won">Да</div></td>
+                          <td><div class="win-chance">20.3%</div></td>
+                          <td><div class="win-amount">0$</div></td>
+                        </tr>
+                        <tr>
+                          <td><div class="game-number">#1010</div></td>
+                          <td><div class="win-indicator lost">Нет</div></td>
+                          <td><div class="win-chance">20.3%</div></td>
+                          <td><div class="win-amount">100$</div></td>
+                        </tr>
+                        <tr>
+                          <td><div class="game-number">#1010</div></td>
+                          <td><div class="win-indicator lost">Нет</div></td>
+                          <td><div class="win-chance">20.3%</div></td>
+                          <td><div class="win-amount">100$</div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+    <!-- build:js -->
+    <script src="assets/js/main.js"></script>
+     <!-- endbuild -->
+  </body>
+
+</html>

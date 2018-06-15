@@ -1,0 +1,185 @@
+.balance {
+  position: relative;
+  .balance-overlay {
+    transform: skewX(-22deg);
+    transition: all 0.1s ease;
+    will-change: opacity;
+    opacity: 0;
+    position: absolute;
+    top: -25px;
+    left: -75px;
+    width: calc(100% + 100px);
+    height: calc(100% + 50px);
+    background: rgba(0, 0, 0, .95);
+    box-shadow: 0 0 100px rgba($color5, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      opacity: 1;
+    }
+    .row {
+      transform: skewX(22deg);
+    }
+    .action-deposit {
+      font-size: 20px;
+      text-align: center;
+    }
+    .action-withdraw {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+}
+.bets {
+  height: 300px;
+  width: 100%;
+  background: rgba(0,0,0,.2);
+  border-radius: 10px;
+  margin-top: 50px;
+  box-shadow: 0 0 200px rgba($color1, 0.2);
+  border: 3px solid $color1;
+  position: relative;
+  .bet-counter {
+      position: absolute;
+      right: 25px;
+      top: -20px;
+      width: 100px;
+      height: 50px;
+      background: lighten($color1, 5);
+      box-shadow: 0 0 100px $color1;
+      transform: skewX(-21deg);
+      padding: 13px 0;
+      text-align: center;
+      color: white;
+      font-family: 'Montserrat Alternates';
+      span {
+        transform: skewX(21deg);
+        display: inline-block;
+      }
+  }
+  .bet-container {
+    padding: 20px 30px;
+    overflow-y: auto;
+    height: 100%;
+    .bet {
+      width: 100%;
+      color: white;
+      background: $color5;
+      box-shadow: 0 0 15px rgba($color5, 0.3);
+      padding: 5px 20px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      div {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .avatar {
+        width: 30px;
+        height: 30px;
+        background: $color1;
+        box-shadow: 0 0 40px rgba(0,0,0,.5);
+        position: relative;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .nickname {
+        font-weight: bold;
+        margin-left: 15px;
+        font-size: 18px;
+      }
+      .comment {
+        margin-left: 10px;
+      }
+      .amount {
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+.player-carousel {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 600px;
+  height: auto;
+  margin-top: 102px;
+  background: $background-color;
+  position: relative;
+  padding: 20px;
+  padding-bottom: 60px;
+  .btn-play {
+    position: absolute;
+    bottom: -25px;
+    right: 50px;
+  }
+  .play-amount {
+    position: absolute;
+    bottom: -25px;
+    left: 90px;
+  }
+  ul {
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 2px;
+      height: 100%;
+      background: $color1;
+      box-shadow: 0 0 10px $color1, 0 0 20px $color1, 0 0 30px $color1;
+      z-index: 10;
+    }
+    position: relative;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-type:none;
+    white-space:nowrap;
+    overflow: hidden;
+    li {
+      display: inline-block;
+      position: relative;
+      &:after {
+        content: attr(data-amount);
+        position: absolute;
+        bottom: 0px;
+        text-align: center;
+        color: white;
+        font-size: 14px;
+        left: 0;
+        height: 20px;
+        width: 100%;
+        background: $color5;
+        z-index: 10;
+      }
+      img {
+        width: 64px;
+      }
+    }
+  }
+  .game-announcement {
+    .title {
+      font-size: 3em;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      &.timer {
+        letter-spacing: 5px;
+      }
+    }
+    .subtitle {
+      text-align: center;
+      color: lighten($background-color, 50);
+      font-size: 20px;
+      &.winner {
+        font-weight: bold;
+        color: $color5;
+      }
+    }
+  }
+}

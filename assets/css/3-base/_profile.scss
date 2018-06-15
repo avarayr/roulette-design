@@ -1,0 +1,30 @@
+.modal-profile {
+  .total-won {
+    text-align: center;
+    font-size: 28px;
+  }
+  .user-profile-avatar {
+    padding-left: 10px;
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  .profile-win-stats {
+    width: 100%;
+    text-align: center;
+    .win-indicator {
+        padding: 5px 20px;
+        text-align: center;
+        border-radius: 30px;
+        &.won {
+          background-color: $color5;
+          box-shadow: 0 0 30px $color5;
+        }
+        &.lost {
+          background-color: $color1;
+          box-shadow: 0 0 30px $color1;
+        }
+    }
+  }
+}

@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
  */
+@import url("https://fonts.googleapis.com/css?family=Didact+Gothic|Montserrat+Alternates:400,600,700&subset=cyrillic");
 *,
 *::before,
 *::after {
@@ -9225,6 +9226,377 @@ html {
         align-self: stretch !important; } }
 
 /* Custom Mixins -------------------- */
+.balance {
+  position: relative; }
+  .balance .balance-overlay {
+    -webkit-transform: skewX(-22deg);
+            transform: skewX(-22deg);
+    -webkit-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+    will-change: opacity;
+    opacity: 0;
+    position: absolute;
+    top: -25px;
+    left: -75px;
+    width: calc(100% + 100px);
+    height: calc(100% + 50px);
+    background: rgba(0, 0, 0, 0.95);
+    -webkit-box-shadow: 0 0 100px rgba(255, 22, 84, 0.5);
+            box-shadow: 0 0 100px rgba(255, 22, 84, 0.5);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .balance .balance-overlay:hover {
+      opacity: 1; }
+    .balance .balance-overlay .row {
+      -webkit-transform: skewX(22deg);
+              transform: skewX(22deg); }
+    .balance .balance-overlay .action-deposit {
+      font-size: 20px;
+      text-align: center; }
+    .balance .balance-overlay .action-withdraw {
+      font-size: 20px;
+      text-align: center; }
+
+.bets {
+  height: 300px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin-top: 50px;
+  -webkit-box-shadow: 0 0 200px rgba(4, 110, 242, 0.2);
+          box-shadow: 0 0 200px rgba(4, 110, 242, 0.2);
+  border: 3px solid #046ef2;
+  position: relative; }
+  .bets .bet-counter {
+    position: absolute;
+    right: 25px;
+    top: -20px;
+    width: 100px;
+    height: 50px;
+    background: #147bfb;
+    -webkit-box-shadow: 0 0 100px #046ef2;
+            box-shadow: 0 0 100px #046ef2;
+    -webkit-transform: skewX(-21deg);
+            transform: skewX(-21deg);
+    padding: 13px 0;
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat Alternates'; }
+    .bets .bet-counter span {
+      -webkit-transform: skewX(21deg);
+              transform: skewX(21deg);
+      display: inline-block; }
+  .bets .bet-container {
+    padding: 20px 30px;
+    overflow-y: auto;
+    height: 100%; }
+    .bets .bet-container .bet {
+      width: 100%;
+      color: white;
+      background: #ff1654;
+      -webkit-box-shadow: 0 0 15px rgba(255, 22, 84, 0.3);
+              box-shadow: 0 0 15px rgba(255, 22, 84, 0.3);
+      padding: 5px 20px;
+      border-radius: 10px;
+      margin-bottom: 10px; }
+      .bets .bet-container .bet div {
+        display: inline-block;
+        vertical-align: middle; }
+      .bets .bet-container .bet .avatar {
+        width: 30px;
+        height: 30px;
+        background: #046ef2;
+        -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+                box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+        position: relative;
+        overflow: hidden; }
+        .bets .bet-container .bet .avatar img {
+          width: 100%;
+          height: 100%; }
+      .bets .bet-container .bet .nickname {
+        font-weight: bold;
+        margin-left: 15px;
+        font-size: 18px; }
+      .bets .bet-container .bet .comment {
+        margin-left: 10px; }
+      .bets .bet-container .bet .amount {
+        margin-left: 15px; }
+
+.player-carousel {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 600px;
+  height: auto;
+  margin-top: 102px;
+  background: #0E1428;
+  position: relative;
+  padding: 20px;
+  padding-bottom: 60px; }
+  .player-carousel .btn-play {
+    position: absolute;
+    bottom: -25px;
+    right: 50px; }
+  .player-carousel .play-amount {
+    position: absolute;
+    bottom: -25px;
+    left: 90px; }
+  .player-carousel ul {
+    position: relative;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-type: none;
+    white-space: nowrap;
+    overflow: hidden; }
+    .player-carousel ul:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 2px;
+      height: 100%;
+      background: #046ef2;
+      -webkit-box-shadow: 0 0 10px #046ef2, 0 0 20px #046ef2, 0 0 30px #046ef2;
+              box-shadow: 0 0 10px #046ef2, 0 0 20px #046ef2, 0 0 30px #046ef2;
+      z-index: 10; }
+    .player-carousel ul li {
+      display: inline-block;
+      position: relative; }
+      .player-carousel ul li:after {
+        content: attr(data-amount);
+        position: absolute;
+        bottom: 0px;
+        text-align: center;
+        color: white;
+        font-size: 14px;
+        left: 0;
+        height: 20px;
+        width: 100%;
+        background: #ff1654;
+        z-index: 10; }
+      .player-carousel ul li img {
+        width: 64px; }
+  .player-carousel .game-announcement .title {
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+    text-align: center; }
+    .player-carousel .game-announcement .title.timer {
+      letter-spacing: 5px; }
+  .player-carousel .game-announcement .subtitle {
+    text-align: center;
+    color: #6a80cb;
+    font-size: 20px; }
+    .player-carousel .game-announcement .subtitle.winner {
+      font-weight: bold;
+      color: #ff1654; }
+
+.main-title.history-title {
+  margin: 100px;
+  top: 50px; }
+
+.game-history {
+  color: #fff;
+  background: rgba(14, 20, 40, 0.5);
+  border-radius: 10px;
+  padding: 40px; }
+  .game-history table thead {
+    background: #046ef2;
+    border: none;
+    -webkit-box-shadow: 0 0 40px rgba(4, 110, 242, 0.5);
+            box-shadow: 0 0 40px rgba(4, 110, 242, 0.5); }
+
+.won-amount {
+  padding: 5px 20px;
+  background-color: #ff1654;
+  -webkit-box-shadow: 0 0 30px #ff1654;
+          box-shadow: 0 0 30px #ff1654;
+  width: 100px;
+  text-align: center;
+  border-radius: 30px; }
+
+.modal-profile .total-won {
+  text-align: center;
+  font-size: 28px; }
+
+.modal-profile .user-profile-avatar {
+  padding-left: 10px; }
+  .modal-profile .user-profile-avatar img {
+    width: 200px;
+    height: 200px; }
+
+.modal-profile .profile-win-stats {
+  width: 100%;
+  text-align: center; }
+  .modal-profile .profile-win-stats .win-indicator {
+    padding: 5px 20px;
+    text-align: center;
+    border-radius: 30px; }
+    .modal-profile .profile-win-stats .win-indicator.won {
+      background-color: #ff1654;
+      -webkit-box-shadow: 0 0 30px #ff1654;
+              box-shadow: 0 0 30px #ff1654; }
+    .modal-profile .profile-win-stats .win-indicator.lost {
+      background-color: #046ef2;
+      -webkit-box-shadow: 0 0 30px #046ef2;
+              box-shadow: 0 0 30px #046ef2; }
+
 /* Base Styles -------------------- */
+.container {
+  position: relative; }
+
+.main-title {
+  color: white;
+  font-weight: bold;
+  font-size: 4em;
+  margin-top: 100px;
+  position: relative;
+  margin-bottom: 10px; }
+  .main-title span {
+    position: relative; }
+  .main-title:before {
+    content: "";
+    position: absolute;
+    left: -35px;
+    top: 0;
+    width: 80px;
+    height: 100px;
+    background: #147bfb;
+    -webkit-box-shadow: 0 0 100px #046ef2;
+            box-shadow: 0 0 100px #046ef2;
+    -webkit-transform: skew(-21deg);
+            transform: skew(-21deg);
+    opacity: 0.8; }
+
+.secondary-title {
+  color: white;
+  font-weight: bold;
+  font-size: 4em;
+  margin-top: 100px;
+  position: absolute;
+  right: 0;
+  margin-bottom: 10px; }
+  .secondary-title span {
+    position: relative; }
+  .secondary-title:before {
+    content: "";
+    position: absolute;
+    left: -35px;
+    top: 0;
+    width: 80px;
+    height: 100px;
+    background: #ff3067;
+    -webkit-box-shadow: 0 0 100px #ff1654;
+            box-shadow: 0 0 100px #ff1654;
+    -webkit-transform: skew(-21deg);
+            transform: skew(-21deg);
+    opacity: 0.8; }
+
+.body-text {
+  color: #92c2fd; }
+
+.btn.btn-skewed {
+  color: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4797fc), to(#046ef2));
+  background: linear-gradient(#4797fc, #046ef2);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+  font-size: 1.1rem;
+  padding: 12px 35px;
+  display: inline-block;
+  -webkit-transform: skew(-21deg);
+          transform: skew(-21deg);
+  -webkit-box-shadow: 0 0 30px #0463d9;
+          box-shadow: 0 0 30px #0463d9;
+  /* Un-skew the text */ }
+  .btn.btn-skewed:active {
+    background: -webkit-gradient(linear, left top, left bottom, from(#046ef2), to(#2d89fc)) !important;
+    background: linear-gradient(#046ef2, #2d89fc) !important; }
+  .btn.btn-skewed > span {
+    display: inline-block;
+    -webkit-transform: skew(21deg);
+            transform: skew(21deg); }
+
+.input-skewed {
+  padding: 10px 20px;
+  -webkit-transform: skewX(-22deg);
+          transform: skewX(-22deg);
+  background: white;
+  display: inline-block; }
+  .input-skewed input {
+    -webkit-transform: skewX(22deg);
+            transform: skewX(22deg);
+    border: none;
+    outline: none;
+    font-size: 22px;
+    width: 200px; }
+    .input-skewed input:focus, .input-skewed input:active {
+      border: none;
+      outline: none; }
+
+.profile-trigger:hover {
+  text-decoration: underline;
+  cursor: pointer; }
+
+#background {
+  width: calc(100% + 390px);
+  height: calc(100% + 390px);
+  -webkit-filter: blur(16px);
+          filter: blur(16px);
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+  position: fixed;
+  left: 0px;
+  top: -250px;
+  z-index: 0; }
+
+.stretch {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto; }
+
+body {
+  font-family: "Didact Gothic", "Montserrat Alternates" !important;
+  margin-top: 100px; }
+
+.navbar {
+  padding: 20px 40px; }
+
+.navbar.bg-custom {
+  background: -webkit-gradient(linear, left top, left bottom, from(#0E1428), to(rgba(0, 0, 0, 0.35)));
+  background: linear-gradient(#0E1428, rgba(0, 0, 0, 0.35));
+  -webkit-box-shadow: 0 0 15px #010102;
+          box-shadow: 0 0 15px #010102; }
+  .navbar.bg-custom a.navbar-brand {
+    color: #4460be;
+    text-transform: uppercase;
+    font-weight: bold; }
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 0px;
+  background-color: #F5F5F5; }
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5; }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #D62929; }
 
 /*# sourceMappingURL=main.css.map */

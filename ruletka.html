@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Ruletka</title>
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- build:css -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- endbuild -->
+  </head>
+
+  <body>
+      <div id="background">
+        <img src="assets/img/bg.png" class="stretch" alt="" />
+      </div>
+      <nav class="navbar navbar-expand-md navbar-dark bg-custom fixed-top">
+           <a class="navbar-brand" href=".">Рулетка</a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+           </button>
+
+           <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+             <ul class="navbar-nav mr-auto">
+               <li class="nav-item active">
+                 <a class="nav-link" href=".">Игра <span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link" href="history.html">История игр</a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link disabled" href="#">Игр Сегодня: 10</a>
+               </li>
+
+             </ul>
+           </div>
+        </nav>
+
+         <div class="container">
+
+          <div class="row">
+            <div class="col-md">
+              <div class="main-title">
+                <span>СТАВКИ</span>
+              </div>
+
+              <div class="bets" data-overall="$1600.00">
+                <div class="bet-counter">
+                  <span>$1610.00</span>
+                </div>
+                <div class="bet-container">
+                  <div class="bet">
+                    <div class="avatar"><img src="assets/img/user.png" alt=""></div>
+                    <div class="nickname"><span class="profile-trigger" data-id="1">Mika</a></div>
+                    <div class="comment">го го го )))</div>
+                    <div class="amount">+$10.00</div>
+                  </div>
+                  <div class="bet">
+                    <div class="avatar"><img src="assets/img/user.png" alt=""></div>
+                    <div class="nickname"><span class="profile-trigger" data-id="2">Сергей</a></div>
+                    <div class="comment">суприм бич</div>
+                    <div class="amount">+$1600.00</div>
+                  </div>
+                  <div class="bet">
+                    <div class="avatar"><img src="assets/img/user.png" alt=""></div>
+                    <div class="nickname"><span class="profile-trigger" data-id="2">Сергей</a></div>
+                    <div class="comment">суприм бич</div>
+                    <div class="amount">+$1600.00</div>
+                  </div>
+                  <div class="bet">
+                    <div class="avatar"><img src="assets/img/user.png" alt=""></div>
+                    <div class="nickname"><span class="profile-trigger" data-id="2">Сергей</a></div>
+                    <div class="comment">суприм бич</div>
+                    <div class="amount">+$1600.00</div>
+                  </div>
+                  <div class="bet">
+                    <div class="avatar"><img src="assets/img/user.png" alt=""></div>
+                    <div class="nickname"><span class="profile-trigger" data-id="2">Сергей</a></div>
+                    <div class="comment">суприм бич</div>
+                    <div class="amount">+$1600.00</div>
+                  </div>
+                  <div class="bet">
+                    <div class="avatar"><img src="assets/img/user.png" alt=""></div>
+                    <div class="nickname"><span class="profile-trigger" data-id="2">Сергей</a></div>
+                    <div class="comment">суприм бич</div>
+                    <div class="amount">+$1600.00</div>
+                  </div>
+                  <div class="bet">
+                    <div class="avatar"><img src="assets/img/user.png" alt=""></div>
+                    <div class="nickname"><span class="profile-trigger" data-id="2">Сергей</a></div>
+                    <div class="comment">суприм бич</div>
+                    <div class="amount">+$1600.00</div>
+                  </div>
+                  <div class="bet">
+                    <div class="avatar"><img src="assets/img/user.png" alt=""></div>
+                    <div class="nickname"><span class="profile-trigger" data-id="2">Сергей</a></div>
+                    <div class="comment">суприм бич</div>
+                    <div class="amount">+$1600.00</div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md">
+
+              <div class="secondary-title balance">
+                <span>Баланс: $20.00</span>
+                <div class="balance-overlay">
+                  <div class="row">
+                    <div class="col-md action-deposit">
+                      <button class="btn btn-skewed" data-toggle="modal" data-target="#modalDeposit"><span>Пополнить</span></button>
+                    </div>
+                    <div class="col-md action-withdraw">
+                      <button class="btn btn-skewed" data-toggle="modal" data-target="#modalWithdraw"><span>Вывести</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="player-carousel">
+                <ul class="player-list">
+                  <li data-amount="$10.00"><span class="profile-trigger" data-id="1"><img src="assets/img/user.png" alt=""></span></li>
+                  <li data-amount="$10.00"><span class="profile-trigger" data-id="1"><img src="assets/img/user.png" alt=""></span></li>
+                  <li data-amount="$10.00"><span class="profile-trigger" data-id="1"><img src="assets/img/user.png" alt=""></span></li>
+                  <li data-amount="$10.00"><span class="profile-trigger" data-id="1"><img src="assets/img/user.png" alt=""></span></li>
+                  <li data-amount="$10.00"><span class="profile-trigger" data-id="1"><img src="assets/img/user.png" alt=""></span></li>
+                  <li data-amount="$10.00"><span class="profile-trigger" data-id="1"><img src="assets/img/user.png" alt=""></span></li>
+                  <li data-amount="$10.00"><span class="profile-trigger" data-id="1"><img src="assets/img/user.png" alt=""></span></li>
+                  <li data-amount="$10.00"><span class="profile-trigger" data-id="1"><img src="assets/img/user.png" alt=""></span></li>
+
+                </ul>
+
+                <div class="game-announcement">
+                  <div class="title timer">00:15</div>
+                  <div class="subtitle">Игра начнется когда наберётся 10 игроков</div>
+                  <div class="subtitle winner">Победил: Mika</div>
+                </div>
+                <div class="play-amount input-skewed">
+                  <input type="text" class="form-input input" placeholder="1.00">
+                </div>
+                <button class="btn btn-skewed btn-play"><span>Принять участие</span></button>
+              </div>
+
+            </div>
+
+
+          </div>
+         </div>
+
+
+        <!-- MODAL FOR DEPOSIT -->
+        <div class="modal fade" id="modalDeposit" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Пополнить баланс</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group row">
+                  <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                  <div class="col-sm-10">
+                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="inputDepositAmount" class="col-sm-2 col-form-label">Кол-во руб.</label>
+                  <div class="col-sm-10">
+                    <input type="number" class="form-control" id="inputDepositAmount" placeholder="100.00">
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary">Далее</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- MODAL FOR WITHDRAWAL -->
+        <div class="modal fade" id="modalWithdraw" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Вывести баланс</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group row">
+                  <label for="inputWithdrawAmount" class="col-sm-2 col-form-label">Сколько?</label>
+                  <div class="col-sm-10">
+                    <input type="number" class="form-control" id="inputWithdrawAmount" placeholder="100.00">
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary">Далее</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+         <div class="modal modal-profile" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" class="modal-username">Username</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-5s">
+                    <div class="user-profile-avatar">
+                      <img src="assets/img/user.png" alt="">
+                    </div>
+                    <div class="total-won">$500.5</div>
+                  </div>
+                  <div class="col-md">
+                    <table class="profile-win-stats table table-striped table-dark">
+                      <thead>
+                        <tr>
+                          <th>Игра</th>
+                          <th>Победил(а)?</th>
+                          <th>Шанс</th>
+                          <th>Сумма</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><div class="game-number">#1010</div></td>
+                          <td><div class="win-indicator won">Да</div></td>
+                          <td><div class="win-chance">20.3%</div></td>
+                          <td><div class="win-amount">0$</div></td>
+                        </tr>
+                        <tr>
+                          <td><div class="game-number">#1010</div></td>
+                          <td><div class="win-indicator lost">Нет</div></td>
+                          <td><div class="win-chance">20.3%</div></td>
+                          <td><div class="win-amount">100$</div></td>
+                        </tr>
+                        <tr>
+                          <td><div class="game-number">#1010</div></td>
+                          <td><div class="win-indicator lost">Нет</div></td>
+                          <td><div class="win-chance">20.3%</div></td>
+                          <td><div class="win-amount">100$</div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    <!-- build:js -->
+    <script src="assets/js/main.js"></script>
+     <!-- endbuild -->
+  </body>
+
+</html>

@@ -1,1 +1,99 @@
 /* Base Styles -------------------- */
+.container {
+  position: relative;
+}
+.main-title {
+  color: white;
+  font-weight: bold;
+  font-size: 4em;
+  margin-top: 100px;
+  position: relative;
+  span {
+    position: relative;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    left: -35px;
+    top: 0;
+    width: 80px;
+    height: 100px;
+    background: lighten($color1, 5);
+    box-shadow: 0 0 100px $color1;
+    transform: skew(-21deg);
+    opacity: 0.8;
+  }
+  margin-bottom: 10px;
+}
+
+
+.secondary-title {
+  color: white;
+  font-weight: bold;
+  font-size: 4em;
+  margin-top: 100px;
+  position: absolute;
+  right: 0;
+  span {
+    position: relative;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    left: -35px;
+    top: 0;
+    width: 80px;
+    height: 100px;
+    background: lighten($color5, 5);
+    box-shadow: 0 0 100px $color5;
+    transform: skew(-21deg);
+    opacity: 0.8;
+  }
+  margin-bottom: 10px;
+}
+
+.body-text {
+  color: lighten($color1, 30);
+}
+
+.btn.btn-skewed {
+  color: #fff;
+  background: linear-gradient(lighten($color1, 15), $color1);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+  font-size: 1.1rem;
+  padding: 12px 35px;
+  display: inline-block;
+  transform: skew(-21deg);
+  box-shadow: 0 0 30px darken($color1, 5);
+  &:active {
+      background: linear-gradient($color1, lighten($color1, 10)) !important;
+    }
+  & > span { display: inline-block; transform: skew(21deg); } /* Un-skew the text */
+}
+
+.input-skewed {
+  padding: 10px 20px;
+  transform: skewX(-22deg);
+  background: white;
+  display: inline-block;
+  input {
+    transform: skewX(22deg);
+    border: none;
+    outline: none;
+    font-size: 22px;
+    width: 200px;
+    &:focus, &:active {
+      border: none;
+      outline: none;
+    }
+  }
+}
+
+.profile-trigger:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

@@ -5,7 +5,16 @@
 // Functional color variables
 
 // Font stacks
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic|Montserrat+Alternates:400,600,700&subset=cyrillic');
 
 // Asset paths
 $path-image   :   '../img';
 $path-fonts     :  '../fonts';
+$font       : 'Didact Gothic', 'Montserrat Alternates';
+
+$background-color: #0E1428;
+$color1: #046ef2;
+$color2: rgba(112, 193, 179, 1);
+$color3: rgba(178, 219, 191, 1);
+$color4: rgba(243, 255, 189, 1);
+$color5: rgba(255, 22, 84, 1);
